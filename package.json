@@ -23,7 +23,10 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "oui": "^4.4.16",
-    "pcap": "git+https://github.com/mranney/node_pcap.git"
+    "forever": "^0.15.3",
+    "ip": "^1.1.4",
+    "libnmap": "^0.3.8",
+    "pcap": "git+https://github.com/mranney/node_pcap.git",
+    "rx": "^4.1.0"
   }
 }
