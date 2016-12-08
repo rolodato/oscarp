@@ -26,6 +26,7 @@
     "forever": "^0.15.3",
     "ip": "^1.1.4",
     "libnmap": "^0.3.8",
+    "osc": "^2.1.0",
     "pcap": "git+https://github.com/mranney/node_pcap.git",
     "rx": "^4.1.0"
   }
