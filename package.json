@@ -1,0 +1,29 @@
+{
+  "name": "oscarp",
+  "version": "1.0.0",
+  "description": "ARP (Address Resolution Protocol) to OSC (Open Sound Control)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolodato/oscarp.git"
+  },
+  "author": "Rodrigo López Dato <rolodato@rolodato.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rolodato/oscarp/issues"
+  },
+  "homepage": "https://github.com/rolodato/oscarp#readme",
+  "devDependencies": {
+    "eslint": "^3.11.1",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "oui": "^4.4.16",
+    "pcap": "git+https://github.com/mranney/node_pcap.git"
+  }
+}
