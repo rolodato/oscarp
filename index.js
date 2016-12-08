@@ -5,7 +5,12 @@ const os = require('os');
 const ip = require('ip');
 const Rx = require('rx');
 
-const interfaceName = process.argv[2];
+const interfaceName = process.env.IFACE;
+const interfaces = Object.keys(os.networkInterfaces());
+if (!interfaceName) {
+    throw `No network interface configured. Make sure $IFACE is set to one of: ${interfaces}`;
+}
+console.log(`Using interface ${interfaceName}`);
 const interface = os.networkInterfaces()[interfaceName][0];
 if (!interface) {
     throw `Could not find interface ${interfaceName}`;
@@ -50,9 +55,9 @@ const clean = (pkt) => {
 
 const udpPort = new osc.UDPPort({
     localAddress: '0.0.0.0',
-    localPort: Number.parseInt(process.argv[3]),
+    localPort: 27015,
     remoteAddress: '127.0.0.1',
-    remotePort: Number.parseInt(process.argv[4])
+    remotePort: 27016
 });
 udpPort.open();
 
