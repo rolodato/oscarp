@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "start": "trap \"forever stopall\" INT; forever start index.js && forever logs index.js -f"
+    "start": "trap \"$(npm bin)/forever stopall\" INT; $(npm bin)/forever start index.js && $(npm bin)/forever logs index.js -f"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "ip": "^1.1.4",
     "libnmap": "^0.3.8",
     "osc": "^2.1.0",
+    "oui": "^4.4.16",
     "pcap": "git+https://github.com/mranney/node_pcap.git",
     "rx": "^4.1.0"
   }

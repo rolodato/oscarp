@@ -11,11 +11,11 @@ if (!interfaceName) {
     throw `No network interface configured. Make sure $IFACE is set to one of: ${interfaces}`;
 }
 console.log(`Using interface ${interfaceName}`);
-const interface = os.networkInterfaces()[interfaceName][0];
-if (!interface) {
+const iface = os.networkInterfaces()[interfaceName][0];
+if (!iface) {
     throw `Could not find interface ${interfaceName}`;
 }
-const subnet = ip.subnet(interface.address, interface.netmask);
+const subnet = ip.subnet(iface.address, iface.netmask);
 const range = subnet.networkAddress + '/' + subnet.subnetMaskLength;
 const scan = () => {
     console.log('Beginning ARP scan on ' + range);
